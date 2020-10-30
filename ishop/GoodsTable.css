@@ -1,0 +1,10 @@
+.GoodsTable {
+    margin: 0 auto;
+    text-align: center;
+    border: 2px brown solid;
+}
+.GoodsTable .Heading {
+    color: brown;
+    font-size: 2em;
+    margin: 0 auto;
+}
