@@ -4,27 +4,28 @@ var GoodsTable = React.createClass({
     render: function() {
     // формирование блока товаров
     var goods=[];
-    let heading = React.DOM.tr( {className:'className'}, 
-                    React.DOM.th( {className:'className'}, "Наименование"),
-                    React.DOM.th( {className:'className'}, "товар"),
-                    React.DOM.th( {className:'className'}, "остаток на складе"));
+    let heading = React.DOM.tr( {className: 'TableHeader'}, 
+                    React.DOM.th( {className:'#'}, "Наименование"),
+                    React.DOM.th( {className:'#'}, "Товар"),
+                    React.DOM.th( {className:'#'}, "Цена"),
+                    React.DOM.th( {className:'#'}, "Остаток на складе"));
     goods.push(heading);
     this.props.goods.forEach(item => {
-        // строки товаров   
+        // строки товаров  
         var goodTd =    
-            React.DOM.tr({key:item.code},
-                React.DOM.td({className:'className'},item.name),
-                React.DOM.td({className:'className'},
-                    React.DOM.img({className:'className', src: item.url})),
-                React.DOM.td({className:'className'},item.amount),
+            React.DOM.tr({key:item.code, className:'GoodRow'},
+                React.DOM.td({className:'.Name'},item.name),
+                React.DOM.td({className:'Image'},
+                    React.DOM.img({className:'#', src: item.url})),
+                React.DOM.td({className:'Price'},item.price),
+                React.DOM.td({className:'Amount'},item.amount),
             );
         // создается массив HTML-строк товаров
         goods.push(goodTd);
     }); 
-
         
     return React.DOM.table( {className:'GoodsTable'}, 
-        React.DOM.thead( {className:'Heading'}, this.props.shopName),
+        React.DOM.caption( {className:'ShopName'}, this.props.shopName),
         React.DOM.tbody( {className:'className'}, goods ),
     );
     },

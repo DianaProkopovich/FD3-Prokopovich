@@ -2,9 +2,25 @@
     margin: 0 auto;
     text-align: center;
     border: 2px brown solid;
+    border-collapse: collapse;
 }
-.GoodsTable .Heading {
+.GoodsTable .ShopName {
     color: brown;
-    font-size: 2em;
+    font: 2em  bold;
     margin: 0 auto;
 }
+
+.GoodsTable tr td, .TableHeader th {
+    border: 2px brown solid;
+    padding: 20px;
+}
+
+.GoodRow:nth-child(even) {
+    background-color: rgba(165, 42, 42, 0.397);
+}
+
+/* Селекторы для последующего форматирования таблицы
+.GoodsTable .Good .Name
+.GoodsTable .Good .Price
+.GoodsTable .Good .Image
+.GoodsTable .Good .Amount */
