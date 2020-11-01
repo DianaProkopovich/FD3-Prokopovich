@@ -4,7 +4,7 @@ var GoodsTable = React.createClass({
     render: function() {
     // формирование блока товаров
     var goods=[];
-    let heading = React.DOM.tr( {className: 'TableHeader'}, 
+    let heading = React.DOM.tr( {key:'GoodsTableCaption', className:'TableHeader'}, 
                     React.DOM.th( {className:'#'}, "Наименование"),
                     React.DOM.th( {className:'#'}, "Товар"),
                     React.DOM.th( {className:'#'}, "Цена"),
